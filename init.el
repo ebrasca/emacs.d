@@ -364,11 +364,6 @@
              :config
              (slime-setup '(slime-fancy slime-compiler-notes-tree slime-indentation slime-cl-indent slime-repl)))
 
-(use-package column-enforce-mode
-             :ensure t
-             :custom (column-enforce-column 120)
-             :config (global-column-enforce-mode t))
-
 (use-package neotree
              :ensure t
              :custom
