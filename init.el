@@ -119,6 +119,7 @@
              :defer 3
              :delight "ε "
              :preface
+             (require 'subr-x)
              (defun my/erc-notify (nickname message)
                "Displays a notification message for ERC."
                (let* ((channel (buffer-name))
@@ -143,7 +144,7 @@
              (erc-notice-face ((t (:foreground "#ebcb8b"))))
              (erc-timestamp-face ((t (:foreground "#a3be8c"))))
              :custom
-             (erc-autojoin-channels-alist '(("freenode.net" "#clim" "#lispgames" "#lisp" "#mezzano")))
+             (erc-autojoin-channels-alist '(("freenode.net" "#clim" "#next-browser" "#lisp" "#mezzano")))
              (erc-autojoin-timing 'ident)
              (erc-fill-function 'erc-fill-static)
              (erc-fill-static-center 13)
