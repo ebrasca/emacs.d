@@ -142,7 +142,7 @@
              (erc-notice-face ((t (:foreground "#ebcb8b"))))
              (erc-timestamp-face ((t (:foreground "#a3be8c"))))
              :custom
-             (erc-autojoin-channels-alist '(("freenode.net" "#clim" "#next-browser" "#lisp" "#mezzano")))
+             (erc-autojoin-channels-alist '(("freenode.net" "#clim" "#nyxt" "#lisp" "#mezzano")))
              (erc-autojoin-timing 'ident)
              (erc-fill-function 'erc-fill-static)
              (erc-fill-static-center 13)
@@ -167,12 +167,13 @@
              ;; imaps
              (gnus-select-method
               '(nnimap "librepanther"
-                (nnimap-address "imaps.librepanther.com")
+                (nnimap-address "imap.librepanther.com")
                 (nnimap-server-port 993)
                 (nnimap-stream ssl)))
              ;; smtp
              (smtpmail-smtp-server "smtp.librepanther.com")
              (smtpmail-smtp-service 25)
+             (smtpmail-stream-type 'starttls)
              (send-mail-function 'smtpmail-send-it)
              ;; sort functions
              (gnus-thread-sort-functions
