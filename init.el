@@ -38,8 +38,6 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-(eval-after-load 'tramp '(setenv "SHELL" "/bin/zsh"))
-
 ;;;-----------------------------------------------------------------------------
 ;;; Open files with sudo
 ;;;-----------------------------------------------------------------------------
