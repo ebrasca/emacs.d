@@ -341,7 +341,6 @@
              :init
              (load (expand-file-name "~/quicklisp/slime-helper.el"))
              :custom
-             (inferior-lisp-program "sbcl --dynamic-space-size 4000")
              (indent-tabs-mode nil)
              (slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
              (slime-startup-animation nil)
@@ -360,6 +359,8 @@
              (lisp-loop-indent-forms-like-keywords t)
              (lisp-lambda-list-keyword-parameter-alignment t)
              :config
+	     (setq slime-lisp-implementations
+		   '((sbcl  ("/usr/bin/sbcl" "--dynamic-space-size" "4GB") :coding-system utf-8-unix)))
              (slime-setup '(slime-fancy slime-compiler-notes-tree slime-indentation slime-cl-indent slime-repl)))
 
 (use-package neotree
