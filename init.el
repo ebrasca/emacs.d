@@ -338,30 +338,21 @@
              (add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit))
 
 (use-package slime
-             :init
-             (load (expand-file-name "~/quicklisp/slime-helper.el"))
-             :custom
-             (indent-tabs-mode nil)
-             (slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
-             (slime-startup-animation nil)
-             (slime-auto-select-connection 'always)
-             (slime-kill-without-query-p t)
-             (slime-fuzzy-explanation "")
-             (slime-asdf-collect-notes t)
-             (slime-inhibit-pipelining nil)
-             (slime-load-failed-fasl 'always)
-             (slime-when-complete-filename-expand t)
-             (slime-repl-history-remove-duplicates t)
-             (slime-repl-history-trim-whitespaces t)
-             (slime-export-symbol-representation-auto t)
-             (lisp-indent-function 'common-lisp-indent-function)
-             (lisp-loop-indent-subclauses nil)
-             (lisp-loop-indent-forms-like-keywords t)
-             (lisp-lambda-list-keyword-parameter-alignment t)
-             :config
-	     (setq slime-lisp-implementations
-		   '((sbcl  ("/usr/bin/sbcl" "--dynamic-space-size" "4GB") :coding-system utf-8-unix)))
-             (slime-setup '(slime-fancy slime-compiler-notes-tree slime-indentation slime-cl-indent slime-repl)))
+  :init
+  (load (expand-file-name "~/quicklisp/slime-helper.el"))
+  :custom
+  (indent-tabs-mode nil)
+  (slime-auto-select-connection 'always)
+  (slime-kill-without-query-p t)
+  (slime-load-failed-fasl 'never)
+  :config
+  (setq slime-lisp-implementations
+        '((sbcl  ("/usr/bin/sbcl" "--dynamic-space-size" "4GB")
+           :coding-system utf-8-unix)))
+  (slime-setup '(slime-fancy
+                 slime-indentation
+                 slime-cl-indent
+                 slime-repl)))
 
 (use-package neotree
              :ensure t
