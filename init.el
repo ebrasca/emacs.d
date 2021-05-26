@@ -308,6 +308,12 @@
              ;; I use C-c c to start capture mode
              (global-set-key (kbd "C-c c") 'org-capture))
 
+(use-package column-enforce-mode
+  :ensure t
+  :config
+  (set-face-attribute 'column-enforce-face nil :foreground "#ff0000")
+  (add-hook 'prog-mode-hook 'column-enforce-mode))
+
 (use-package paredit
              :ensure t
              :config
