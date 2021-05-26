@@ -363,15 +363,3 @@
              :config
              (global-set-key [f8] 'neotree-toggle)
              (add-hook 'neo-after-create-hook (lambda (&optional dummy) (display-line-numbers-mode -1))))
-
-(use-package multiple-cursors
-             :ensure t
-             :config
-             (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-             (global-set-key (kbd "C-M-<next>") 'mc/mark-next-like-this)
-             (global-set-key (kbd "C-M-<prior>") 'mc/mark-previous-like-this)
-             (global-set-key (kbd "C-M-m <down>") 'mc/mark-next-like-this)
-             (global-set-key (kbd "C-M-m <up>") 'mc/mark-previous-like-this)
-             (global-set-key (kbd "C-M-m <right>") 'mc/unmark-next-like-this)
-             (global-set-key (kbd "C-M-m <left>") 'mc/unmark-previous-like-this)
-             (global-set-key (kbd "C-M-m a") 'mc/mark-all-like-this))
