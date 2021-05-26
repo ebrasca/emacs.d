@@ -4,21 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
- '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages
-   (quote
-    (column-enforce-mode slime use-package ztree exec-path-from-shell guix magit-org-todos magit-gh-pulls magit-todos magithub multiple-cursors neotree paredit magit))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(erc-action-face ((t (:foreground "#8fbcbb"))))
- '(erc-error-face ((t (:foreground "#bf616a"))))
- '(erc-input-face ((t (:foreground "#ebcb8b"))))
- '(erc-notice-face ((t (:foreground "#ebcb8b"))))
- '(erc-timestamp-face ((t (:foreground "#a3be8c")))))
+ '(custom-enabled-themes '(misterioso)))
 
+;; Delete trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; backup
