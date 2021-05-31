@@ -132,7 +132,7 @@
   (erc-notice-face ((t (:foreground "#ebcb8b"))))
   (erc-timestamp-face ((t (:foreground "#a3be8c"))))
   :custom
-  (erc-autojoin-channels-alist '(("freenode.net"
+  (erc-autojoin-channels-alist '(("libera.chat"
                                   "#clim"
                                   "#nyxt"
                                   "#lisp"
@@ -145,6 +145,7 @@
   (erc-lurker-hide-list '("JOIN" "PART" "QUIT"))
   (erc-lurker-threshold-time 43200)
   (erc-prompt-for-nickserv-password nil)
+  (erc-server "irc.libera.chat")
   (erc-server-reconnect-attempts 5)
   (erc-server-reconnect-timeout 3)
   (erc-track-exclude-types '("JOIN" "MODE" "NICK" "PART" "QUIT"
