@@ -14,12 +14,13 @@
       backup-inhibited t)
 
 ;;; Gui
-(setq inhibit-startup-screen t)
-(when window-system
-  (tooltip-mode -1)
-  (tool-bar-mode -1)
-  (menu-bar-mode 1)
-  (scroll-bar-mode -1))
+(setq frame-resize-pixelwise t
+      inhibit-startup-screen t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq mode-line-format nil)
+(setq-default mode-line-format nil)
 
 (prefer-coding-system 'utf-8)
 
