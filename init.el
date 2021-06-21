@@ -9,6 +9,7 @@
       backup-inhibited t)
 
 ;;; Gui
+(load-theme 'misterioso)
 (setq frame-resize-pixelwise t
       inhibit-startup-screen t)
 (menu-bar-mode -1)
